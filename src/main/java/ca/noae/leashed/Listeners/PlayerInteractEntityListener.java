@@ -5,15 +5,18 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 
-public class onPlayerInteractEntityListener implements Listener {
+import java.util.logging.Level;
+
+public class PlayerInteractEntityListener implements Listener {
     private final Leashed plugin;
 
-    public onPlayerInteractEntityListener(Leashed plugin) {
+    public PlayerInteractEntityListener(Leashed plugin) {
         this.plugin = plugin;
     }
 
     @EventHandler
     public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent event) {
-
+        plugin.getLogger().log(Level.SEVERE, "playerinteractentityevent cancelled");
+        event.setCancelled(true);
     }
 }
