@@ -1,0 +1,7 @@
+name: leashed
+version: '1.0.0.0-SNAPSHOT'
+main: ca.noae.leashed.Leashed
+api-version: '1.21'
+load: STARTUP
+authors: [ noaether ]
+website: https://github.com/noaether/leashed
